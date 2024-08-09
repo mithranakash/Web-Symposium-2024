@@ -1,0 +1,231 @@
+/* Global Styles */
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #EAEAEA; /* Default text color */
+    background: url('images/Background.webp') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire viewport */
+    position: relative; /* Needed for the overlay positioning */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Overlay for background image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with reduced opacity */
+    z-index: -1; /* Send the overlay behind the content */
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #003366, #0066cc); /* Dark and light blue gradient */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative; /* Ensures it's above the background overlay */
+    z-index: 1; /* Ensure it's above the background overlay */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Adjust spacing between items */
+}
+
+nav ul li a {
+    color: #EAEAEA; /* Light text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: linear-gradient(to right, #003366, #0066cc); /* Dark and light blue gradient */
+    transform: scale(1.05); /* Slightly increase size */
+}
+
+/* Centering Sections */
+section {
+    background: rgba(0, 0, 0, 0.5); /* Black background with reduced opacity */
+    color: #EAEAEA; /* Light text color */
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    position: relative; /* Required for z-index */
+    z-index: 1; /* Ensure it's above the background overlay */
+}
+
+/* Container Class */
+.container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Padding inside the container */
+}
+
+/* Event Categories */
+.event-categories {
+    text-align: center;
+    margin-top:15px;
+    margin-bottom: 20px;
+ 
+}
+
+.event-btn, .event-item {
+    background: linear-gradient(to right, #003366, #0066cc); /* Dark and light blue gradient */
+    color: #EAEAEA; /* Light text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px; /* Rounded corners */
+    transition: background 0.4s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    display: inline-block; /* Ensure buttons are inline-block */
+}
+
+.event-btn:hover,
+.event-item:hover {
+    background: linear-gradient(to right, #0066cc, #003366); /* Inverted gradient for hover */
+    transform: scale(1.05); /* Slightly increase size */
+}
+
+/* Remove dots (bullets) from list items */
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Event Details Styles */
+.event-details {
+    display: none;
+    padding: 10px;
+   
+    color: #EAEAEA; /* Light text color */
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: opacity 0.4s ease; /* Smooth transition for opacity */
+}
+
+.event-details.show {
+    display: block;
+    opacity: 1; /* Ensure visible */
+}
+
+/* Drop Animation */
+.poster-container {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: dropIn 1s ease-out forwards;
+    transform: translateY(-100vh);
+}
+
+.poster-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.poster-container:hover img {
+    transform: scale(1.05);
+}
+
+.poster-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+@keyframes dropIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Centering Text for Home, Events, About, Contact */
+h1, h2, h3, p {
+    margin: 0; /* Remove default margin */
+    line-height: 1.6; /* Space between lines */
+}
+
+h1 {
+    font-size: 2.5rem; /* Adjust as needed */
+}
+
+h2 {
+    font-size: 2rem; /* Adjust as needed */
+}
+
+h3 {
+    font-size: 1.5rem; /* Adjust as needed */
+}
+
+p {
+    font-size: 1rem; /* Adjust as needed */
+}
+
+/* Hide close button */
+.close-btn {
+    display: none; /* Hide the close button */
+}
+
+#about{
+    margin-top:15px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #7066ff;
+  }
+  
+
+  #loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #003366; /* or any color you prefer */
+    z-index: 9999;
+  }
+  
+  
+  
+  

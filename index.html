@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deus Ex Machina (DXM) Technical Symposium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="preload" href="images/Background.webp" as="image">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="loading-screen"></div>
+    <div id="content" style="display: none;"> 
+    </div>
+    
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>WELCOME TO THE LATEST EDITION OF DXM</h1>
+            <p>DEUS EX MACHINA (DXM) is a renowned national-level technical symposium organized annually by the Mechanical Engineering Department of Velammal Engineering College. This prestigious event offers a prime opportunity for engineering students from across the country to engage in learning, competition and networking with industry professionals.</p>
+        </div>
+    </section>
+
+    <div class="poster-container">
+        <img src="images/Posture.jpg" alt="Symposium Poster">
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About the Institution</h2>
+            <p>The Velammal Educational Trust is a registered non-minority service organization established in the year 1986 by Thiru. M.V. Muthuramalingam to inculcate among the youth a sense of discipline which is important to mould them into useful and capable citizens. The watch words of the Trust are “Dedication, Determination and Distinction”. Velammal Engineering College was established in the year 1995-96 to impart quality education. It is a self-financing non-minority institution, affiliated to Anna University and approved by All India Council for Technical Education (AICTE) and also an ISO certified institution.</p>
+        </div>
+    </section>
+
+    <section id="events" class="event-categories">
+        <h2>Events</h2>
+        <div>
+            <button class="event-btn" data-category="technical">Technical Events</button>
+            <button class="event-btn" data-category="non-technical">Non-Technical Events</button>
+            <button class="event-btn" data-category="workshops">Workshops</button>
+        </div>
+
+        <div id="event-list">
+            <!-- Event details will be dynamically inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>Contact Address: Velammal New-Gen Park, Ambattur Red-hills Road, Surapet, Chennai – 600 066, Tamil Nadu, India.</p>
+        <p>President: +91 97874 65141</p>
+        <p>Secretary: +91 95662 79454</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Deus Ex Machina. All rights reserved. Developed By Akash and Dhanasekar</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
